@@ -1,0 +1,13 @@
+---
+read_pdf_task:
+  description: Extract the price from the text
+  expected_output: Return me just the price as a number
+  async_execution: false
+  agent: price_extractor
+extract_type:
+  description: Extract the receipt type from the text
+  expected_output: just categorize the text in one word
+  async_execution: false
+  agent: receipt_categorizer
+
+

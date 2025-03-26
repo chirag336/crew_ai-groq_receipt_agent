@@ -1,0 +1,28 @@
+[project]
+name = "ai_pdf_total_price_extraction_agent"
+version = "0.1.0"
+description = "ai_pdf_total_price_extraction_agent using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.86.0,<1.0.0",
+    "markitdown[all]~=0.1.0a1",
+    "openai>=1.60.0",
+    "qdrant-client>=1.13.2",
+    "scikit-learn>=1.6.1",
+    "libtesseract-dev",
+    "pytesseract",
+    "tesseract-ocr",
+
+]
+
+[project.scripts]
+ai_pdf_total_price_extraction_agent = "ai_pdf_total_price_extraction_agent.main:run"
+run_crew = "ai_pdf_total_price_extraction_agent.main:run"
+train = "ai_pdf_total_price_extraction_agent.main:train"
+replay = "ai_pdf_total_price_extraction_agent.main:replay"
+test = "ai_pdf_total_price_extraction_agent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
